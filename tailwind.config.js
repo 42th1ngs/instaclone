@@ -3,7 +3,8 @@ module.exports = {
         removeDeprecatedGapUtilities: true
     },
     content: [
-        'src/pages/**/*.{html,js}'
+        'src/pages/**/*.js',
+        'src/components/**/*.js',
     ],
     theme: {
         fill: (theme) => ({
