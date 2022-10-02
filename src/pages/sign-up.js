@@ -5,7 +5,7 @@ import * as ROUTES from '../constants/routes';
 import { doesUsernameExist } from '../services/firebase';
 
 export default function SignUp() {
-    const history = useNavigate();
+    const navigate = useNavigate();
     const { firebase } = useContext(FirebaseContext);
 
     const [username, setUserName] = useState('');
@@ -42,7 +42,7 @@ export default function SignUp() {
                     dateCreated: Date.now()
                 });
 
-                history.push(ROUTES.DASHBOARD);
+                navigate(ROUTES.DASHBOARD);
             } catch (error) {
                 setFullName('');
                 setEmailAddress('');
